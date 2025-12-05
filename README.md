@@ -1,38 +1,84 @@
-# LeetCode-Automation
+# 🚀 LeetCode UI Automation (Selenium + Java)
 
-## 🧪 LeetCode Automation Project
+This project automates basic interactions on **LeetCode** using **Selenium WebDriver**.
+It visits LeetCode, navigates to problem listings, opens questions, verifies URLs, and checks expected behaviors—just like an SDET would automate a real web workflow.
 
-This project automates basic UI interactions on **LeetCode** using **Selenium WebDriver (Java)**.
-The script opens LeetCode, navigates through pages, clicks elements, retrieves data, and performs basic validation checks—similar to what an SDET would automate in a real testing environment.
+---
 
-### 🔍 What the automation does
+## 📌 What This Automation Does
 
-* Opens LeetCode homepage and verifies the URL
-* Navigates to the **Problems** page
-* Extracts and opens the first **5 problem titles**
-* Opens the **Two Sum** problem page and verifies navigation
-* Tries to access **submissions** and checks whether the *Login/Register* prompt appears (expected behavior for non-logged in users)
+✔ Opens the LeetCode homepage
+✔ Navigates to the **Problems/Questions** page
+✔ Opens and verifies the first **5 problem titles**
+✔ Opens the **Two Sum** problem and checks if the URL is correct
+✔ Tries accessing **Submissions** and validates whether the system asks the user to **Login or Register**
 
-### 🛠️ Tech Used
+This helps simulate a basic testing flow to confirm UI behavior, navigation, and expected user restrictions when not logged in.
 
-| Component       | Value                                            |
-| --------------- | ------------------------------------------------ |
-| Language        | Java                                             |
-| Automation Tool | Selenium WebDriver                               |
-| Browser         | Chrome (managed by WebDriverManager)             |
-| Testing Style   | Custom method-based execution (TestCase pattern) |
+---
 
-### 🚀 How to Run
+## 🧰 Tech Stack
 
-1. Clone the repo
-2. Install dependencies
-3. Update Chrome version if needed
-4. Run:
+| Component               | Used               |
+| ----------------------- | ------------------ |
+| Language                | Java               |
+| Automation Tool         | Selenium WebDriver |
+| Browser Driver Handling | WebDriverManager   |
+| Browser Used            | Chrome             |
+| Build Tool              | Gradle             |
 
-```bash
-mvn clean test
+---
+
+## 🛠 How to Run the Project
+
+Make sure you have **Java installed**.
+
+Then run these commands inside the project:
+
+```
+./gradlew clean build
+./gradlew run
 ```
 
-(or run `App.java` directly if you're not using test frameworks yet)
+(Windows PowerShell):
 
+```
+.\gradlew.bat clean build
+.\gradlew.bat run
+```
 
+Selenium and dependencies will install automatically the first time you run it.
+
+---
+
+## 🧪 Test Flow (Methods Implemented)
+
+| Method         | Purpose                                            |
+| -------------- | -------------------------------------------------- |
+| `testCase01()` | Check if the homepage loads successfully           |
+| `testCase02()` | Navigate to problem page and verify listing        |
+| `testCase03()` | Open the **Two Sum** problem                       |
+| `testCase04()` | Check login enforcement when accessing submissions |
+
+---
+
+## 🔮 Future Improvements
+
+* Add assertions instead of `System.out.println()`
+* Convert test execution to **JUnit/TestNG**
+* Add reporting (Extent Reports / Allure)
+* Add multi-browser support
+* Run tests through CI pipelines (GitHub Actions)
+
+---
+
+## 🤝 Contributions
+
+Not open for contributions yet, but ideas, improvements, and suggestions are welcome.
+
+---
+
+## 📎 Author
+
+**Tejaswini Thambabathula**
+Learning automation, testing, and SDET workflow building.
